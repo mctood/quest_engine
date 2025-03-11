@@ -28,7 +28,7 @@ pair<int, int> GetTerminalSize() {
     return {columns, rows};
 }
 
-string CenteredLine(const string& text) {
+string CenteredLine(const string &text) {
     int halfSize = SizeToInt(text.size()) / 2;
     int halfTerminalWidth = GetTerminalSize().first / 2;
 
@@ -87,7 +87,6 @@ int GetBlockWidth() {
 
 void RenderButtons(ButtonRows buttons) {
     int spaceWidth = GetBlockWidth() - STATE_PADDING;
-    int lines = 0;
 
     for (int k = 0; k < buttons.size(); k++) {
         auto row = buttons[k];
@@ -178,26 +177,29 @@ void RenderState(const string &txt, const ButtonRows &buttons) {
     // bottom separator
     cout << CenteredLine(BottomSeparator);
 
-    // wait for user input /todo
-    cin.get();
+    // wait for user input
+    // cin.get();
 }
 
-int main() {
+[[noreturn]] int main() {
+
     string txt = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of ... (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.";
     ButtonRows buttons {
         {
-            Button('x', "Text 1"),
-            Button('y', "Text 2"),
-            Button('z', "Text 3"),
-        }, {
-            Button('a', "Text"),
-            Button('b', "Other text"),
-        }, {
-            Button('c', "Another"),
-        }
+            Button('x', "Выход"),
+            Button('y', "Тоже выход"),
+        },
     };
 
     RenderState(txt, buttons);
 
-    return 0;
+    int rows = GetTerminalSize().second;
+    int cols = GetTerminalSize().first;
+    while (true) {
+        if (GetTerminalSize().first != cols || GetTerminalSize().second != rows) {
+            RenderState(txt, buttons);
+            rows = GetTerminalSize().second;
+            cols = GetTerminalSize().first;
+        }
+    }
 }
