@@ -55,6 +55,36 @@ build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_unscanned_Deb
   OBJECT_DIR = CMakeFiles\untitled.dir
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
 
+build CMakeFiles/untitled.dir/helpers/statehelpers.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/PetFe/CLionProjects/untitled/helpers/statehelpers.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\helpers\statehelpers.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\helpers
+
+build CMakeFiles/untitled.dir/helpers/buttonhelpers.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/PetFe/CLionProjects/untitled/helpers/buttonhelpers.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\helpers\buttonhelpers.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\helpers
+
+build CMakeFiles/untitled.dir/States/index.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/PetFe/CLionProjects/untitled/States/index.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\States\index.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\States
+
+build CMakeFiles/untitled.dir/States/buttons.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/PetFe/CLionProjects/untitled/States/buttons.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\States\buttons.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\States
+
+build CMakeFiles/untitled.dir/States/states.cpp.obj: CXX_COMPILER__untitled_unscanned_Debug C$:/Users/PetFe/CLionProjects/untitled/States/states.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\States\states.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\States
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -63,7 +93,7 @@ build CMakeFiles/untitled.dir/main.cpp.obj: CXX_COMPILER__untitled_unscanned_Deb
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/helpers/statehelpers.cpp.obj CMakeFiles/untitled.dir/helpers/buttonhelpers.cpp.obj CMakeFiles/untitled.dir/States/index.cpp.obj CMakeFiles/untitled.dir/States/buttons.cpp.obj CMakeFiles/untitled.dir/States/states.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir

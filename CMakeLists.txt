@@ -4,5 +4,11 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(untitled main.cpp
-        Box.h
-        Button.h)
+        struct/Box.h
+        struct/Button.h
+        struct/State.h
+        States/helpers.cpp
+        helpers/buttonhelpers.cpp
+        States/buttons.cpp
+        States/states.cpp
+        utils/color.cpp)
